@@ -13,8 +13,6 @@ replay_pid*
 /target/
 
 # Eclipse files
-.classpath
-.project
 /.mvn
 /.settings
 
