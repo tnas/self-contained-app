@@ -20,7 +20,7 @@ public class SimpleWebApp {
         tomcat.setPort(8080);
         tomcat.getConnector();
 
-        String contextPath = "/";
+        String contextPath = "";
         String docBase = new File(".").getAbsolutePath();
 
         var context = tomcat.addContext(contextPath, docBase);
