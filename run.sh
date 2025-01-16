@@ -14,5 +14,5 @@ if [ ! -d $JDK_HOME ]; then
 	rm -f $JDK_ZIP
 fi
 
-${JDK_BIN}/javac -cp "lib/*" -d out src/java/io/github/tnas/webapp/SimpleWebApp.java
+${JDK_BIN}/javac -cp "lib/*" -d out src/io/github/tnas/webapp/SimpleWebApp.java
 ${JDK_BIN}/java -cp "out:lib/*" io.github.tnas.webapp.SimpleWebApp
