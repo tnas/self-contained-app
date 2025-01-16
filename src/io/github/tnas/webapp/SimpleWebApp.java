@@ -1,15 +1,14 @@
 package io.github.tnas.webapp;
 
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.startup.Tomcat;
+import java.io.File;
+import java.io.IOException;
 
-import javax.servlet.Servlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+
+import org.apache.catalina.LifecycleException;
+import org.apache.catalina.startup.Tomcat;
 
 public class SimpleWebApp {
 
@@ -20,19 +19,19 @@ public class SimpleWebApp {
         tomcat.setPort(8080);
         tomcat.getConnector();
 
-        String contextPath = "";
-        String docBase = new File(".").getAbsolutePath();
+        var contextPath = "";
+        var docBase = new File(".").getAbsolutePath();
 
         var context = tomcat.addContext(contextPath, docBase);
 
-        Servlet servlet = new HttpServlet() {
+        var servlet = new HttpServlet() {
 
 			private static final long serialVersionUID = 1L;
 
 			@Override
             protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
 
-                try (PrintWriter writer = resp.getWriter()) {
+                try (var writer = resp.getWriter()) {
                     writer.println("<html><title>Welcome</title><body>");
                     writer.println("<h1>Have a Great Day!</h1>");
                     writer.println("</body></html>");
@@ -42,8 +41,8 @@ public class SimpleWebApp {
             }
         };
 
-        String servletName = "Servlet1";
-        String urlPattern = "/go";
+        var servletName = "Servlet1";
+        var urlPattern = "/go";
 
         tomcat.addServlet(contextPath, servletName, servlet);
         context.addServletMappingDecoded(urlPattern, servletName);
