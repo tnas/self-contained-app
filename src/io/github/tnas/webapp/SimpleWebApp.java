@@ -11,9 +11,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * https://www.codejava.net/servers/tomcat/how-to-embed-tomcat-server-into-java-web-applications
- */
 public class SimpleWebApp {
 
     public static void main(String[] args) throws LifecycleException {
