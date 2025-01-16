@@ -22,5 +22,6 @@ simple-web-app.iml
 
 # Application
 /out/
+/temp/
 /jdk/linux/
 /jdk/windows/
