@@ -47,6 +47,9 @@ public class SimpleWebApp {
         tomcat.addServlet(contextPath, servletName, servlet);
         context.addServletMappingDecoded(urlPattern, servletName);
 
+        var webappDirLocation = "webapp"; 
+        tomcat.addWebapp("/app", new File(webappDirLocation).getAbsolutePath());
+        
         tomcat.start();
         tomcat.getServer().await();
     }
