@@ -1,4 +1,4 @@
-# Simple Web Application
+# Self-Contained Web Application
 
 Simple web application using embedded tomcat and downloaded/unzipped (not installed) JDK (OpenJDK).
 
@@ -11,4 +11,3 @@ Clone the project or download a zip release and run the scripts accordingly:
 ## References
 - [How to Embed Tomcat Server into Java Web Applications](https://www.codejava.net/servers/tomcat/how-to-embed-tomcat-server-into-java-web-applications)
 - [Radiance Template](https://www.free-css.com/free-css-templates/page266/radiance)
-
