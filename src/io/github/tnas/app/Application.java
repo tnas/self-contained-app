@@ -34,6 +34,7 @@ public class Application {
                 try (var writer = resp.getWriter()) {
                     writer.println("<html><title>Welcome</title><body>");
                     writer.println("<h1>Bem vindos &agrave; etapa pr&aacute;tica da <b>prova did&aacute;tica</b>!</h1>");
+                    writer.println("<h2><ul><li><a href='http://localhost:8080/prova' target='__blank'>Prova Did&aacute;tica</li></ul></h2>");
                     writer.println("</body></html>");
                 } catch (IOException e) {
                     throw new RuntimeException(e);
@@ -46,7 +47,7 @@ public class Application {
         tomcat.addServlet(contextPath, servletName, servlet);
         context.addServletMappingDecoded(urlPattern, servletName);
 
-        tomcat.addWebapp("/plano", new File("webapp/plano").getAbsolutePath());
+        tomcat.addWebapp("/prova", new File("webapp/prova").getAbsolutePath());
         tomcat.addWebapp("/engsoftware", new File("webapp/engsoftware").getAbsolutePath());
         
         tomcat.start();
