@@ -1,4 +1,4 @@
-package io.github.tnas.webapp;
+package io.github.tnas.app;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
 
-public class SimpleWebApp {
+public class Application {
 
     public static void main(String[] args) throws LifecycleException {
 
